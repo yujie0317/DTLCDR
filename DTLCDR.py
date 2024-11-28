@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import torch
+import torch 
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import GINConv, JumpingKnowledge, global_max_pool,GCNConv,GATConv,GATv2Conv,GraphNorm
