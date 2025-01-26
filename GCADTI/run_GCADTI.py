@@ -258,21 +258,6 @@ if __name__ == '__main__':
         net = Model(modeldir=modeldir,device=args.device)
         net.load_pretrained('./model.pt', args.device)
         
-        GDSC2=pd.read_csv('../DTLCDR/process_data/GDSC2.csv',index_col=0)
-        prot=IC_test['sequence'].unique()
-        pred_dti=[]
-        for i in GDSC2['smiles'].unique():
-            for j in prot:
-                pred_dti.append([i,j])
-        pred_dti=pd.DataFrame(pred_dti)
-        pred_dti.columns=['smiles','sequence']
-        pred_dti['label']=0 
-        with torch.no_grad():
-            pred_set=DTIDataset(pred_dti)
-            y_label, y_pred  = net.predict(pred_set)
-        pred_dti['label']=y_pred
-        pred_dti.to_csv('pred_dti_gdsc2.csv')
-        
         PDTC=pd.read_csv('../DTLACDR/process_data/PDTC_aucflag.csv',index_col=0)
         prot=IC_test['sequence'].unique()
         pred_dti=[]
