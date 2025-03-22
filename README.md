@@ -37,6 +37,5 @@ Create a virtual environment and install the requirements before running the cod
     run run_DTLACDR.py to test the model in PDTC
         python run_DTLACDR_PDTC.py --model DTLACDR_cellexp --device 1 --epoch 50
         
-    run 
     
     
