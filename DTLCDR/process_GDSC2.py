@@ -1,10 +1,10 @@
 import pandas as pd 
 import numpy as np
-GDSC2=pd.read_csv('./GDSC_data/GDSC2_fitted_dose_response_25Feb20.csv')
+GDSC2=pd.read_csv('./GDSC_data/GDSC2_fitted_dose_response_25Feb20.csv') #download:https://www.cancerrxgene.org/downloads/bulk_download
 drug2smi=pd.read_csv('./GDSC_data/drug2smi.csv',index_col=0)
 drug2smi=dict(zip(drug2smi.DRUG_NAME,drug2smi.smiles))
 GDSC2=GDSC2[GDSC2.DRUG_NAME.isin(drug2smi)][['COSMIC_ID','DRUG_NAME','LN_IC50']]
-exp=pd.read_csv('./GDSC_data/Cell_line_RMA_proc_basalExp.txt',sep='\t')
+exp=pd.read_csv('./GDSC_data/Cell_line_RMA_proc_basalExp.txt',sep='\t') #download:https://www.cancerrxgene.org/gdsc1000/GDSC1000_WebResources/Home.html
 exp=exp.T
 exp.columns=exp.iloc[0]
 exp=exp[2:]
