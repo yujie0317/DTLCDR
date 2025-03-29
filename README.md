@@ -34,8 +34,8 @@ Create a virtual environment and install the requirements before running the cod
     cd ./DTLACDR/
     run process_PDTC.py to preprocess genetic profies and drug response data in PDTC.
         python process_PDTC.py
-    run run_DTLACDR.py to test the model in PDTC
+    run run_DTLACDR_PDTC.py to test the model in PDTC
         python run_DTLACDR_PDTC.py --model DTLACDR_cellexp --device 1 --epoch 50
-        
-    
+    run run_DTLACDR_TCGA.py to test the model in TCGA
+        python run_DTLACDR_TCGA.py --model DTLACDR_cellexp --device 1 --epoch 50
     
