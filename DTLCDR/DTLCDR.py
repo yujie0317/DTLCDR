@@ -80,7 +80,7 @@ class DTLCDR(nn.Module):
                                        'local_attn_heads': 0,
                                        'g2v_position_emb': True,
                                        'gene2vec_path': self.gene2vec_path,
-                                       'ckpt_path': './panglao_pretrain.pth',
+                                       'ckpt_path': './panglao_pretrain.pth',#download:https://github.com/TranslationalBioinformaticsUnit/scbert-reusability
                                        'param_key': 'model_state_dict'}
 
     def _build(self):
