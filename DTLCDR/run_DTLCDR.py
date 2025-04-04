@@ -53,7 +53,7 @@ for i in range(len(pred_dti_gdsc2.smiles.unique())):
 pred_dti=pd.DataFrame(pred_dti)
 pred_dti.index=pred_dti_gdsc2.smiles.unique().tolist()
 
-gene2vec_dim_200_iter_9=pd.read_csv('./gene2vec_dim_200_iter_9.txt',sep='\t| ',header=None)
+gene2vec_dim_200_iter_9=pd.read_csv('./gene2vec_dim_200_iter_9.txt',sep='\t| ',header=None) #download:https://github.com/jingcheng-du/Gene2vec/blob/master/pre_trained_emb/gene2vec_dim_200_iter_9.txt
 gene2vec_dim_200_iter_9.index=gene2vec_dim_200_iter_9[0]
 gene2vec_dim_200_iter_9=gene2vec_dim_200_iter_9.loc[:,1:]
 gene=pd.read_csv('./process_data/exp_enc.csv',index_col=0)
