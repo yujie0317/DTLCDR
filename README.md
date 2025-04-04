@@ -28,8 +28,9 @@ Create a virtual environment and install the requirements before running the cod
     run process_GDSC2 to preprocess genetic profies and drug response data in GDSC2.
         python process_GDSC2.py 
     run run_DTLCDR.py to train the model
-    #download:https://github.com/jingcheng-du/Gene2vec/blob/master/pre_trained_emb/gene2vec_dim_200_iter_9.txt
-    #download:https://www.cancerrxgene.org/gdsc1000/GDSC1000_WebResources/Home.html
+    #download gene2vec_dim_200_iter_9.txt: https://github.com/jingcheng-du/Gene2vec/blob/master/pre_trained_emb/gene2vec_dim_200_iter_9.txt
+    #download Cell_line_RMA_proc_basalExp.txt: https://www.cancerrxgene.org/gdsc1000/GDSC1000_WebResources/Home.html
+    #download panglao_pretrain.pth: https://github.com/TranslationalBioinformaticsUnit/scbert-reusability
         python run_DTLCDR.py --model DTLCDR --device 0 --split warmstart --epoch 50
         
 ## 3. DTLACDR
